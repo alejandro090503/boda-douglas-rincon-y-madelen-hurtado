@@ -13,12 +13,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Lato:wght@400;700&family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:auto;}
 body{
   font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;
   color:var(--text);background:var(--bg);line-height:1.65;overflow-x:hidden;
@@ -340,20 +340,6 @@ section > *{position:relative;z-index:1;}
 .cal-c p{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:17px;color:var(--dark);margin-bottom:18px;}
 
 /* DRESS CODE — sin card, ilustraciones regencia */
-.dc-section{text-align:center;padding:64px 26px;}
-.dc-title{font-family:'Great Vibes',cursive;font-size:50px;color:var(--dark);text-align:center;line-height:1.05;margin-bottom:8px;}
-.dc-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:16px;letter-spacing:5px;text-transform:uppercase;color:var(--accent);text-align:center;margin-bottom:30px;}
-.dc-figures{display:flex;justify-content:center;align-items:flex-end;gap:18px;margin:0 auto 14px;max-width:340px;}
-.dc-fig{display:flex;flex-direction:column;align-items:center;gap:12px;flex:1;}
-.dc-fig img,.dc-fig svg{width:100%;max-width:148px;height:auto;filter:drop-shadow(0 10px 18px rgba(76,97,64,.20));}
-.dc-fig-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--dark);}
-.dc-avoid{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:26px;}
-.dc-avoid-lbl{font-family:'Lato',sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-ink);font-weight:700;}
-.dc-avoid-sw{display:flex;align-items:center;gap:10px;}
-.dc-avoid-dot{width:30px;height:30px;border-radius:50%;background:var(--blush);border:1px solid rgba(142,47,86,.30);box-shadow:inset 0 1px 2px rgba(255,255,255,.4);}
-.dc-avoid-dot--white{background:#ffffff;border-color:rgba(51,44,38,.30);}
-.dc-avoid-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:600;color:var(--text);opacity:.9;}
-.dc-hairline{width:60px;height:1px;margin:28px auto 0;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:.5;}
 
 /* FAMILIA */
 .fam2{display:flex;flex-direction:column;gap:0;align-items:stretch;}
@@ -388,21 +374,6 @@ section > *{position:relative;z-index:1;}
 .fam2-divider svg{width:100px;height:26px;position:relative;}
 
 /* MESA DE REGALOS — Sobre interactivo */
-.env-wrapper{display:flex;flex-direction:column;align-items:center;width:100%;text-align:center;}
-.env-interactive{display:flex;flex-direction:column;align-items:center;cursor:pointer;outline:none;border:none;background:none;padding:0;margin:0 auto;}
-.env-body{perspective:700px;position:relative;width:260px;height:200px;animation:env-breathe 3.6s ease-in-out infinite;}
-@keyframes env-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
-.env-body svg.env-svg{width:100%;height:100%;}
-.env-flap-wrap{position:absolute;top:46px;left:18px;width:224px;height:86px;transform-origin:top center;transform-style:preserve-3d;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .65s cubic-bezier(.4,0,.2,1);pointer-events:none;z-index:2;}
-.env-interactive.open .env-flap-wrap{transform:rotateX(-175deg);}
-.env-open-content{overflow:hidden;max-height:0;opacity:0;transition:max-height .55s .3s ease,opacity .4s .38s ease;display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 20px;text-align:center;pointer-events:none;}
-.env-interactive.open .env-open-content{max-height:240px;opacity:1;pointer-events:auto;}
-.env-mailbox-icon{width:40px;height:40px;color:var(--gold);margin-top:10px;}
-.env-title{font-family:'Great Vibes',cursive;font-size:30px;color:var(--dark);letter-spacing:.5px;line-height:1.2;}
-.env-desc{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;font-weight:500;color:rgba(51,50,43,.72);line-height:1.75;}
-.dc-avoid-dot--white{background:#ffffff;border-color:rgba(51,44,38,.30);}
-.env-tap-hint{font-family:'Lato',sans-serif;font-size:12px;letter-spacing:2.6px;text-transform:uppercase;color:var(--gold-ink);opacity:.9;margin-top:8px;transition:opacity .3s;text-align:center;width:100%;}
-.env-interactive.open~.env-tap-hint{opacity:0;pointer-events:none;}
 
 /* ALBUM */
 .album-card{
@@ -545,30 +516,11 @@ footer .credit a{color:inherit;text-decoration:none;}
 .portrait-tag{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);opacity:.85;}
 .portrait-divider{width:48px;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:14px auto 0;}
 
-/* ══ EFECTO "PASAR LA PAGINA DE UN LIBRO" — peticion expresa del cliente ══ */
-.wrap{perspective:1400px;perspective-origin:0% 50%;}
-.leaf{transform-style:preserve-3d;will-change:transform,opacity;position:relative;}
-/* lomo del libro sobre el borde izquierdo */
-.wrap::before{
-  content:'';position:absolute;top:0;bottom:0;left:0;width:26px;z-index:6;pointer-events:none;
-  background:linear-gradient(90deg,rgba(111,82,64,.20) 0%,rgba(169,132,106,.10) 38%,rgba(169,132,106,0) 100%);
-}
-/* sombra que barre la hoja mientras gira */
-.leaf-shade{
-  position:absolute;inset:0;z-index:5;pointer-events:none;opacity:0;
-  background:linear-gradient(90deg,rgba(76,97,64,.42) 0%,rgba(169,132,106,.20) 45%,rgba(255,255,255,.28) 100%);
-}
-
 /* ══ PARTICULAS — bosque encantado: petalos rosados + luciernagas doradas ══ */
 #forest-fx{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:0;transition:opacity 1.6s ease;}
 #forest-fx.on{opacity:1;}
 
 @keyframes goldSweep{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-
-/* retrato con crossfade de las 3 fotos del cliente */
-.portrait-stack{position:relative;width:210px;height:260px;}
-.portrait-stack .portrait-img{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity 1.5s ease;}
-.portrait-stack .portrait-img.is-on{opacity:1;}
 
 /* aviso solo adultos */
 .adults-note{
@@ -580,6 +532,207 @@ footer .credit a{color:inherit;text-decoration:none;}
   color:#5c2038;text-align:center;
 }
 .adults-note svg{flex-shrink:0;opacity:.75;}
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   LIBRO — la invitacion se lee pasando paginas con el scroll
+   (peticion expresa del cliente). Motor en JS: Book.
+   ══════════════════════════════════════════════════════════════════════ */
+body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 55%,#efdbe1 100%) fixed;}
+.wrap.is-book{
+  position:fixed;top:0;left:0;right:0;margin:0 auto;
+  height:100vh;height:100svh;max-width:430px;
+  overflow:visible;background:none;z-index:1;
+  perspective:2000px;perspective-origin:50% 50%;
+}
+@media (min-width:460px){.wrap.is-book{box-shadow:0 40px 90px rgba(120,50,70,.18),0 8px 24px rgba(76,97,64,.10);}}
+#book-spacer{width:1px;pointer-events:none;}
+.page{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d;will-change:transform;visibility:hidden;}
+.page-front,.page-back{position:absolute;inset:0;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+.page-front{
+  background-color:var(--bg);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .30 0 0 0 0 .26 0 0 0 .055 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(45deg,transparent 0,transparent 28px,rgba(212,175,55,.032) 28px,rgba(212,175,55,.032) 29px),
+    repeating-linear-gradient(-45deg,transparent 0,transparent 28px,rgba(244,164,192,.075) 28px,rgba(244,164,192,.075) 29px),
+    repeating-linear-gradient(0deg,transparent 0,transparent 55px,rgba(125,154,111,.040) 55px,rgba(125,154,111,.040) 56px),
+    repeating-linear-gradient(90deg,transparent 0,transparent 55px,rgba(169,132,106,.026) 55px,rgba(169,132,106,.026) 56px);
+  box-shadow:inset 16px 0 26px -16px rgba(111,82,64,.26);
+}
+.page-back{
+  transform:rotateY(180deg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  background-color:#fbf0ee;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .30 0 0 0 0 .26 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 70% 55% at 50% 50%,rgba(249,211,224,.55),transparent 70%);
+  box-shadow:inset -16px 0 26px -16px rgba(111,82,64,.28);
+}
+.pb-mono{font-family:'Great Vibes',cursive;font-size:110px;line-height:1;padding:0 18px 10px;
+  background:linear-gradient(135deg,#a9821f,#d4af37 45%,#f7e7ce 55%,#b8932c);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:.42;}
+.pb-line{width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6;}
+.pb-date{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:13px;letter-spacing:.42em;color:var(--gold-ink);opacity:.7;}
+.page-inner{position:relative;min-height:100%;display:flex;flex-direction:column;justify-content:center;padding-bottom:34px;will-change:transform;}
+.page-inner>*{flex-shrink:0;}
+.page.is-cover .page-inner{padding-bottom:0;}
+.page.is-cover .hero{min-height:0;flex:1 0 auto;}
+.page *{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;}
+.page-light,.page-light-back,.page-cast{position:absolute;inset:0;pointer-events:none;}
+.page-light{z-index:8;opacity:0;background:linear-gradient(270deg,rgba(52,30,26,.36) 0%,rgba(52,30,26,.14) 42%,rgba(255,255,255,.10) 100%);}
+.page-light-back{z-index:2;opacity:0;background:linear-gradient(90deg,rgba(52,30,26,.32) 0%,rgba(255,255,255,.14) 55%,rgba(52,30,26,.10) 100%);}
+.page-cast{z-index:7;}
+.page-folio{position:absolute;left:0;right:0;bottom:11px;z-index:6;pointer-events:none;text-align:center;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:14px;letter-spacing:.3em;color:var(--gold-ink);opacity:.8;}
+/* esquina doblada: invita a pasar la pagina */
+.page-curl{position:absolute;right:0;top:0;width:42px;height:42px;z-index:9;pointer-events:none;opacity:0;
+  transform-origin:100% 0;transition:opacity .35s ease;
+  background:linear-gradient(225deg,#e6cfd0 0%,#e6cfd0 49%,rgba(52,30,26,.16) 50%,#f7e7ce 57%,#fffaf6 100%);
+  border-bottom-left-radius:7px;box-shadow:-4px 4px 10px rgba(52,30,26,.12);
+  animation:curlBreath 2.8s ease-in-out infinite;}
+@keyframes curlBreath{0%,100%{transform:scale(.78)}50%{transform:scale(1.12)}}
+.book-spine{position:absolute;top:0;bottom:0;left:0;width:22px;z-index:60;pointer-events:none;
+  background:linear-gradient(90deg,rgba(80,52,40,.24),rgba(80,52,40,.07) 55%,transparent);}
+.book-edge{position:absolute;top:5px;bottom:5px;right:-7px;width:7px;z-index:0;pointer-events:none;border-radius:0 3px 3px 0;
+  background:repeating-linear-gradient(90deg,#e6d6ce 0 1px,#fffaf7 1px 2px);box-shadow:3px 0 8px rgba(80,52,40,.14);}
+@media (max-width:459px){.book-edge{display:none;}}
+.book-hint{position:absolute;left:0;right:0;bottom:calc(108px + env(safe-area-inset-bottom));z-index:4;
+  display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:16px;letter-spacing:.12em;
+  color:var(--dark);opacity:0;transition:opacity .7s ease;text-shadow:0 1px 6px rgba(255,255,255,.9);}
+.book-hint.on{opacity:1;}
+.book-hint svg{width:34px;height:34px;animation:hintTurn 2.4s ease-in-out infinite;}
+@keyframes hintTurn{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(-10deg)}}
+
+/* ══ BRILLO LENTO EN TODOS LOS TITULOS ══ */
+:root{
+  --shine:linear-gradient(105deg,transparent 40%,rgba(255,252,244,0) 43%,rgba(255,252,244,.95) 50%,rgba(255,252,244,0) 57%,transparent 60%);
+  --tb-rose:linear-gradient(135deg,#8e2f56 0%,#b04a74 45%,#8e2f56 100%);
+  --tb-green:linear-gradient(135deg,#3d5032 0%,#5a744e 50%,#3d5032 100%);
+  --tb-gold:linear-gradient(102deg,#7d621b 0%,#a9821f 28%,#c9a43a 50%,#a9821f 72%,#7d621b 100%);
+}
+.hero-name{--tb:linear-gradient(160deg,#8e2f56 0%,#c25f8b 25%,#e98fb3 50%,#c25f8b 75%,#8e2f56 100%);}
+.xv-num{--tb:linear-gradient(135deg,var(--dark) 0%,#c25f8b 45%,var(--dark) 100%);}
+.sec-title{--tb:linear-gradient(135deg,#8e2f56 0%,var(--rose-ink) 42%,var(--accent) 72%,var(--gold-ink) 100%);}
+.sec-title.sec-title-gold,.env-title,.rsvp-title-jen em{--tb:var(--tb-gold);}
+.xv-anos,.portrait-name,.rsvp-title-jen,.dc-note{--tb:var(--tb-green);}
+.fn,.pl-quote,.pl-card-cap{--tb:var(--tb-rose);}
+.album-title{--tb:linear-gradient(135deg,#f7e7ce 0%,#fff7ec 50%,#e9d3a8 100%);}
+.hero-name,.xv-num,.xv-anos,.sec-title,.portrait-name,.rsvp-title-jen,.rsvp-title-jen em,
+.fn,.env-title,.album-title,.dc-note,.pl-quote,.pl-card-cap{
+  background-image:var(--shine),var(--tb)!important;
+  background-size:300% 100%,100% 100%!important;
+  background-repeat:no-repeat!important;
+  background-position:100% 0,0 0;
+  -webkit-background-clip:text!important;background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  animation:titleShine 9s ease-in-out infinite!important;
+}
+.xv-num,.hero-name{animation-delay:1.4s!important;}
+@keyframes titleShine{0%{background-position:100% 0,0 0}46%,100%{background-position:0% 0,0 0}}
+
+/* ══ DRESS CODE — diseño de xv-mia (cards con ilustraciones), sin copos ══ */
+.dc-note{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;letter-spacing:2px;text-transform:uppercase;margin-bottom:30px;font-weight:600;padding:0 6px 2px;}
+.tex-card{position:relative;isolation:isolate;}
+.tex-card::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;
+  background:url('textura-card.png') center/300px 300px repeat;opacity:.55;mix-blend-mode:multiply;}
+.dc-cards{display:flex;justify-content:center;align-items:stretch;gap:14px;max-width:392px;margin:6px auto 24px;}
+.dc-card{flex:1;margin:0;position:relative;border-radius:12px;overflow:hidden;padding:16px 10px 14px;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  background:
+    radial-gradient(ellipse 90px 60px at 18% 6%,rgba(255,255,255,.95),transparent 62%),
+    radial-gradient(ellipse 80px 60px at 86% 88%,rgba(255,255,255,.9),transparent 60%),
+    repeating-linear-gradient(122deg,transparent 0 22px,rgba(255,255,255,.45) 22px 24px,transparent 24px 56px),
+    linear-gradient(158deg,#ffffff 0%,#fff6f9 34%,#fce6ee 68%,#f8d9e5 100%);
+  border:1px solid rgba(214,150,178,.50);
+  box-shadow:0 10px 30px rgba(169,66,106,.14),inset 0 1px 0 rgba(255,255,255,.95);}
+.dc-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.98) 26%,rgba(212,175,55,.45) 50%,rgba(255,255,255,.98) 74%,transparent);}
+.dc-card img{height:190px;width:auto;display:block;}
+.dc-card figcaption{display:flex;flex-direction:column;align-items:center;gap:3px;}
+.dc-card-lbl{font-family:'Cinzel',serif;font-size:13px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;color:var(--dark);}
+.dc-card-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:16px;color:var(--rose-ink);}
+.dc-reserve{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:var(--dark);line-height:1.55;margin-bottom:14px;text-align:center;}
+.dc-crown{display:inline-block;width:56px;height:40px;
+  -webkit-mask:url('corona-mini.png') center/contain no-repeat;mask:url('corona-mini.png') center/contain no-repeat;
+  filter:drop-shadow(0 1px 1px rgba(110,40,70,.35));}
+.dc-crown-row{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;}
+@media (max-width:360px){.dc-cards{gap:10px;}.dc-card{padding:12px 6px 10px;}.dc-card img{height:160px;}.dc-card-lbl{font-size:12px;letter-spacing:1.8px;}}
+
+/* ══ LLUVIA DE SOBRES — diseño de boda-jeffersson-y-vanessa ══ */
+#sgifts{text-align:center;overflow:hidden;}
+.gift-intro{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;font-weight:500;color:var(--text);line-height:1.75;margin:0 auto 4px;max-width:330px;}
+.env-rain{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.env-rain-item{position:absolute;top:-46px;will-change:transform;opacity:0}
+#sgifts .env-stage{position:relative;z-index:1}
+.env-interactive{display:flex;flex-direction:column;align-items:center;cursor:pointer;-webkit-tap-highlight-color:transparent;outline:none;border:none;background:none;padding:0;margin:26px auto 0;opacity:0}
+.env-body{perspective:700px;position:relative;width:min(258px,74vw);aspect-ratio:260/200;filter:drop-shadow(0 10px 26px rgba(142,47,86,.22))}
+.env-body svg.env-svg{width:100%;height:100%;display:block}
+.env-flap-wrap{position:absolute;top:23%;left:6.9%;width:86.2%;height:43%;transform-origin:top center;transform-style:preserve-3d;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .65s cubic-bezier(.4,0,.2,1);pointer-events:none;z-index:2}
+.env-interactive.open .env-flap-wrap{transform:rotateX(-175deg)}
+.env-seal{position:absolute;top:52%;left:50%;width:23%;aspect-ratio:1;transform:translate(-50%,-50%);z-index:3;transition:opacity .35s ease,transform .5s cubic-bezier(.4,0,.2,1);pointer-events:none}
+.env-interactive.open .env-seal{opacity:0;transform:translate(-50%,-50%) scale(.7)}
+.env-open-content{overflow:hidden;max-height:0;opacity:0;transition:max-height .55s .3s ease,opacity .4s .38s ease;display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 16px;text-align:center;pointer-events:none}
+.env-interactive.open .env-open-content{max-height:320px;opacity:1;pointer-events:auto;margin-top:20px}
+.env-mailbox-icon{width:42px;height:42px;color:var(--gold);margin-top:6px}
+.env-title{font-family:'Great Vibes',cursive;font-size:clamp(30px,8.4vw,36px);line-height:1.4;padding:.08em 6px}
+.env-desc{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;font-style:italic;color:var(--text);opacity:.9;line-height:1.75;max-width:300px}
+.env-tap-hint{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-ink);margin-top:18px;opacity:0;transition:opacity .5s ease;position:relative;z-index:1}
+.env-tap-hint.show{opacity:.9;animation:envHintPulse 2.4s ease-in-out infinite}
+.env-interactive.open~.env-tap-hint{opacity:0!important;animation:none;pointer-events:none}
+@keyframes envHintPulse{0%,100%{opacity:.55}50%{opacity:1}}
+.env-body.landed{animation:envBreathe 3.6s ease-in-out infinite}
+@keyframes envBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+
+/* ══ FOTOS DE SOPHIA A LO LARGO DEL LIBRO ══ */
+.photo-leaf{text-align:center;padding:52px 22px 58px;overflow:hidden;}
+.pl-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:15px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:30px;}
+.pl-frame{position:relative;margin:0 auto;}
+.pl-window{position:relative;overflow:hidden;isolation:isolate;background:#f3e3e8;}
+.pl-window::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(ellipse 80% 70% at 50% 38%,transparent 58%,rgba(70,30,45,.26) 100%);}
+.pl-window::after{content:'';position:absolute;top:-10%;bottom:-10%;left:-60%;width:60%;z-index:2;pointer-events:none;
+  background:linear-gradient(105deg,transparent 0%,rgba(255,250,240,.42) 50%,transparent 100%);
+  transform:translateX(-40%) skewX(-8deg);animation:plGlint 8s ease-in-out infinite;}
+@keyframes plGlint{0%,60%{transform:translateX(-40%) skewX(-8deg)}85%,100%{transform:translateX(330%) skewX(-8deg)}}
+.pl-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;
+  transform-origin:50% 28%;animation:plKen 18s ease-in-out infinite alternate;}
+@keyframes plKen{0%{transform:scale(1.03) translate3d(0,0,0)}100%{transform:scale(1.15) translate3d(-1.5%,-2.5%,0)}}
+.pl-halo{position:absolute;left:50%;top:46%;width:135%;aspect-ratio:1;border-radius:50%;z-index:-1;pointer-events:none;
+  background:radial-gradient(circle,rgba(244,164,192,.42) 0%,rgba(247,231,206,.26) 38%,transparent 68%);
+  transform:translate(-50%,-50%);animation:plHalo 7s ease-in-out infinite;}
+@keyframes plHalo{0%,100%{opacity:.7;transform:translate(-50%,-50%) scale(.93)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.05)}}
+/* variante A: ventana en arco */
+.pl-arch{width:min(72vw,292px);}
+.pl-arch .pl-window{aspect-ratio:3/4.3;border-radius:999px 999px 18px 18px;border:3px solid #f7e7ce;
+  box-shadow:0 0 0 1px rgba(212,175,55,.6),0 24px 54px rgba(142,47,86,.24),0 6px 16px rgba(76,97,64,.14);}
+.pl-outline{position:absolute;inset:-14px;border-radius:999px 999px 26px 26px;border:1px solid rgba(212,175,55,.7);pointer-events:none;animation:plFloat 6s ease-in-out infinite;}
+.pl-outline::before{content:'';position:absolute;inset:-8px;border-radius:999px 999px 32px 32px;border:1px dashed rgba(194,95,139,.45);}
+@keyframes plFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.pl-arch .portrait-corner{width:40px;height:40px;opacity:.8;z-index:4;}
+.pl-arch .portrait-corner.bl{bottom:-18px;left:-18px;}
+.pl-arch .portrait-corner.br{bottom:-18px;right:-18px;}
+/* variante B: fotografia montada en passe-partout champan */
+.pl-card{width:min(74vw,290px);padding:13px 13px 62px;border-radius:6px;
+  background:linear-gradient(160deg,#fffdfb 0%,#fbf0ec 100%);border:1px solid rgba(212,175,55,.40);
+  box-shadow:0 26px 54px rgba(142,47,86,.22),0 5px 14px rgba(76,97,64,.12);
+  animation:plTilt 8s ease-in-out infinite;}
+@keyframes plTilt{0%,100%{transform:rotate(-2.4deg) translateY(0)}50%{transform:rotate(1.4deg) translateY(-7px)}}
+.pl-card .pl-window{aspect-ratio:3/3.85;border-radius:3px;box-shadow:inset 0 0 0 1px rgba(212,175,55,.45);}
+.pl-c{position:absolute;width:30px;height:30px;z-index:3;pointer-events:none;
+  background:linear-gradient(135deg,#8a6d1f,#d4af37 45%,#f7e7ce 55%,#b8932c);}
+.pl-c.tl{top:5px;left:5px;clip-path:polygon(0 0,100% 0,0 100%);}
+.pl-c.tr{top:5px;right:5px;clip-path:polygon(0 0,100% 0,100% 100%);}
+.pl-c.bl{bottom:53px;left:5px;clip-path:polygon(0 0,100% 100%,0 100%);}
+.pl-c.br{bottom:53px;right:5px;clip-path:polygon(100% 0,100% 100%,0 100%);}
+.pl-card-cap{position:absolute;left:0;right:0;bottom:12px;font-family:'Great Vibes',cursive;font-size:30px;line-height:1.3;padding:0 10px 4px;}
+.pl-quote{font-family:'Great Vibes',cursive;font-size:clamp(36px,10.5vw,44px);line-height:1.3;margin-top:40px;padding:0 10px 6px;}
+.pl-sub{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;letter-spacing:.3em;text-transform:uppercase;color:var(--dark);margin-top:6px;}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-name,.xv-num,.xv-anos,.sec-title,.portrait-name,.rsvp-title-jen,.rsvp-title-jen em,.fn,.env-title,.album-title,.dc-note,.pl-quote,.pl-card-cap{animation:none!important;}
+  .pl-img,.pl-window::after,.pl-halo,.pl-outline,.pl-card,.page-curl,.env-body.landed,.env-tap-hint.show{animation:none!important;}
+}
 
 @media (prefers-reduced-motion:reduce){
   .sec-title-gold{animation:none!important;}
@@ -637,6 +790,13 @@ footer .credit a{color:inherit;text-decoration:none;}
       <div class="hero-city" id="hCity">Tampa, Florida</div>
 
     </div>
+    <div class="book-hint" id="bookHint" aria-hidden="true">
+      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 7h16l6 6v20H9z" opacity=".55"/><path d="M25 7v6h6"/>
+        <path d="M31 25c-4 0-9 1.5-12 6" stroke="var(--rose-ink)"/><path d="M19 27v4h4" stroke="var(--rose-ink)"/>
+      </svg>
+      <span>Desliza para pasar la p&aacute;gina</span>
+    </div>
   </section>
 
   <!-- ORNAMENTO -->
@@ -665,7 +825,7 @@ footer .credit a{color:inherit;text-decoration:none;}
   </div>
 
   <!-- INTRO -->
-  <section class="leaf" style="padding:0;" id="sintro">
+  <section style="padding:0;" id="sintro">
     <div class="sec-bg-botanica" style="background-image:url('botanica2.png');opacity:.10"></div>
     <div class="intro-wrap rv">
       <p class="intro-text"><span class="intro-drop">H</span>ay sue&ntilde;os que la vida nos regala una sola vez.
@@ -678,7 +838,7 @@ footer .credit a{color:inherit;text-decoration:none;}
   </section>
 
   <!-- RETRATO — foto de la quinceañera -->
-  <section class="portrait-section leaf" id="sportrait">
+  <section class="portrait-section" id="sportrait">
     <div class="sec-bg-botanica" style="background-image:url('botanica1.png');opacity:.07"></div>
     <div class="eyebrow eyebrow-gold rv">La Festejada</div>
     <div class="portrait-frame rv">
@@ -709,11 +869,7 @@ footer .credit a{color:inherit;text-decoration:none;}
         <circle cx="10" cy="16" r="1.8" fill="var(--green)" opacity=".7"/>
         <circle cx="22" cy="6" r="2" fill="var(--rose)" opacity=".5"/>
       </svg>
-      <div class="portrait-stack">
-        <img class="portrait-img is-on" src="sophia1.jpg" alt="Sophia Rincón Hurtado">
-        <img class="portrait-img" src="sophia2.jpg" alt="Sophia Rincón Hurtado" loading="lazy">
-        <img class="portrait-img" src="sophia3.jpg" alt="Sophia Rincón Hurtado" loading="lazy">
-      </div>
+      <img class="portrait-img" src="sophia1.jpg" alt="Sophia Rincón Hurtado">
     </div>
     <div class="portrait-name rv">Sophia Rinc&oacute;n</div>
     <div class="portrait-tag rv">XV A&ntilde;os &middot; 2026</div>
@@ -734,7 +890,7 @@ footer .credit a{color:inherit;text-decoration:none;}
   </div>
 
   <!-- COUNTDOWN -->
-  <section class="leaf" id="scd">
+  <section id="scd">
     <h2 class="sec-title rv">Cuenta Regresiva</h2>
     <div class="cd2-container">
       <div class="cd2-grid">
@@ -785,6 +941,30 @@ footer .credit a{color:inherit;text-decoration:none;}
     </div>
   </section>
 
+  <!-- FOTO — ventana en arco (sophia3) -->
+  <section class="photo-leaf" id="sfoto1">
+    <div class="pl-eyebrow rv">Mis Quince A&ntilde;os</div>
+    <figure class="pl-frame pl-arch rv">
+      <span class="pl-halo" aria-hidden="true"></span>
+      <div class="pl-window"><img class="pl-img" src="sophia3.jpg" alt="Sophia Rincón frente al espejo"></div>
+      <span class="pl-outline" aria-hidden="true"></span>
+      <svg class="portrait-corner bl" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 34 C2 18 18 2 34 2" stroke="var(--gold)" stroke-width="1.2" fill="none" opacity=".7"/>
+          <circle cx="4" cy="28" r="2.5" fill="var(--rose)" opacity=".6"/>
+          <circle cx="10" cy="16" r="1.8" fill="var(--green)" opacity=".7"/>
+          <circle cx="22" cy="6" r="2" fill="var(--rose)" opacity=".5"/>
+        </svg>
+      <svg class="portrait-corner br" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 34 C2 18 18 2 34 2" stroke="var(--gold)" stroke-width="1.2" fill="none" opacity=".7"/>
+          <circle cx="4" cy="28" r="2.5" fill="var(--rose)" opacity=".6"/>
+          <circle cx="10" cy="16" r="1.8" fill="var(--green)" opacity=".7"/>
+          <circle cx="22" cy="6" r="2" fill="var(--rose)" opacity=".5"/>
+        </svg>
+    </figure>
+    <p class="pl-quote rv">Un sue&ntilde;o hecho realidad</p>
+  </section>
+
+
   <div class="orn rv">
     <svg viewBox="0 0 300 42" fill="none" xmlns="http://www.w3.org/2000/svg">
       <line x1="0" y1="20" x2="96" y2="20" stroke="var(--green)" stroke-width="0.85" opacity="0.5"/>
@@ -799,7 +979,7 @@ footer .credit a{color:inherit;text-decoration:none;}
   </div>
 
   <!-- UBICACION — solo recepción (sin ceremonia formal) -->
-  <section class="leaf" id="subic">
+  <section id="subic">
     <div class="sec-bg-botanica" style="background-image:url('botanica1.png');opacity:.08"></div>
     <div class="eyebrow eyebrow-gold rv">D&oacute;nde celebraremos</div>
     <h2 class="sec-title rv">Recepci&oacute;n</h2>
@@ -825,7 +1005,7 @@ footer .credit a{color:inherit;text-decoration:none;}
   </section>
 
   <!-- CALENDAR -->
-  <section class="cal-c leaf" id="scal">
+  <section class="cal-c" id="scal">
     <div class="eyebrow">No lo olvides</div>
     <h2 class="sec-title">Gu&aacute;rdalo</h2>
     <p>Agrega el evento a tu calendario para no olvidarlo</p>
@@ -845,38 +1025,32 @@ footer .credit a{color:inherit;text-decoration:none;}
     </svg>
   </div>
 
-  <!-- DRESS CODE — ilustraciones regencia Bridgerton, sin cards -->
-  <section class="dc-section leaf" id="sdc">
-    <div class="eyebrow eyebrow-gold rv">Dress Code</div>
-    <h2 class="dc-title rv">Formal</h2>
-    <div class="dc-subtitle rv">Etiqueta</div>
-
-    <div class="dc-figures rv">
-      <!-- CABALLERO — lámina de moda Regencia (Costume Parisien, 1799, dominio público), fondo removido -->
-      <div class="dc-fig">
-        <img src="caballero.png?v=1" alt="Caballero en levita verde estilo Regencia" loading="lazy">
-        <span class="dc-fig-label">Caballeros</span>
-      </div>
-
-      <!-- DAMA — lámina de moda Regencia (Costume Français, 1799, dominio público), fondo removido -->
-      <div class="dc-fig">
-        <img src="dama.png?v=1" alt="Dama con vestido imperio y spencer verde estilo Regencia" loading="lazy">
-        <span class="dc-fig-label">Damas</span>
-      </div>
+  <!-- DRESS CODE — diseño xv-mia (sin copos) -->
+  <section id="sdc">
+    <div class="eyebrow eyebrow-gold rv">Etiqueta</div>
+    <h2 class="sec-title rv">C&oacute;digo de Vestimenta</h2>
+    <div class="dc-note rv">Formal</div>
+    <div class="dc-cards rv">
+      <figure class="dc-card tex-card">
+        <img src="dc-caballero.png" alt="Caballero con traje formal">
+        <figcaption>
+          <span class="dc-card-lbl">Caballeros</span>
+          <span class="dc-card-sub">Traje formal</span>
+        </figcaption>
+      </figure>
+      <figure class="dc-card tex-card">
+        <img src="dc-dama.png" alt="Dama con vestido largo">
+        <figcaption>
+          <span class="dc-card-lbl">Damas</span>
+          <span class="dc-card-sub">Vestido largo</span>
+        </figcaption>
+      </figure>
     </div>
-
-    <div class="dc-avoid">
-      <span class="dc-avoid-lbl">Colores reservados &middot; por favor evitar</span>
-      <div class="dc-avoid-sw">
-        <span class="dc-avoid-dot"></span>
-        <span class="dc-avoid-name">Rosa claro</span>
-      </div>
-      <div class="dc-avoid-sw">
-        <span class="dc-avoid-dot dc-avoid-dot--white"></span>
-        <span class="dc-avoid-name">Blanco</span>
-      </div>
+    <p class="dc-reserve rv">Estos colores est&aacute;n <strong>reservados</strong> para la quincea&ntilde;era</p>
+    <div class="dc-crown-row rv">
+      <span class="dc-crown" style="background-color:#f9d3e0;" title="Rosa claro"></span>
+      <span class="dc-crown" style="background-color:#FFFFFF;filter:drop-shadow(0 0 1px rgba(110,40,70,.6));" title="Blanco"></span>
     </div>
-    <div class="dc-hairline"></div>
   </section>
 
   <div class="orn rv">
@@ -893,7 +1067,7 @@ footer .credit a{color:inherit;text-decoration:none;}
   </div>
 
   <!-- FAMILIA -->
-  <section class="leaf" id="sfam">
+  <section id="sfam">
     <div class="eyebrow eyebrow-gold rv">Con la Bendici&oacute;n de</div>
     <h2 class="sec-title rv">Mi Familia</h2>
     <div class="fam2">
@@ -912,6 +1086,20 @@ footer .credit a{color:inherit;text-decoration:none;}
     </div>
   </section>
 
+  <!-- FOTO — fotografia montada (sophia2) -->
+  <section class="photo-leaf" id="sfoto2">
+    <div class="pl-eyebrow rv">Un Nuevo Cap&iacute;tulo</div>
+    <figure class="pl-frame pl-card rv">
+      <span class="pl-halo" aria-hidden="true"></span>
+      <div class="pl-window"><img class="pl-img" src="sophia2.jpg" alt="Sophia Rincón con vestido de XV años"></div>
+      <span class="pl-c tl"></span><span class="pl-c tr"></span><span class="pl-c bl"></span><span class="pl-c br"></span>
+      <figcaption class="pl-card-cap">Sophia &middot; XV</figcaption>
+    </figure>
+    <p class="pl-quote rv">Hoy comienza mi historia</p>
+    <div class="pl-sub rv">26 &middot; Diciembre &middot; 2026</div>
+  </section>
+
+
   <div class="orn rv">
     <svg viewBox="0 0 300 42" fill="none" xmlns="http://www.w3.org/2000/svg">
       <line x1="0" y1="20" x2="96" y2="20" stroke="var(--green)" stroke-width="0.85" opacity="0.5"/>
@@ -925,53 +1113,55 @@ footer .credit a{color:inherit;text-decoration:none;}
     </svg>
   </div>
 
-  <!-- MESA DE REGALOS -->
-  <section class="leaf" id="sgifts">
-    <div class="eyebrow">Con Cari&ntilde;o</div>
-    <h2 class="sec-title rv">Mesa de Regalos</h2>
-    <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;font-weight:500;color:var(--text);opacity:.80;line-height:1.75;margin-bottom:28px;">
-      Tu presencia es el regalo m&aacute;s valioso.<br>
-      Si deseas obsequiarme algo, con mucho cari&ntilde;o comparto esta opci&oacute;n.
-    </p>
-    <div class="env-wrapper">
-    <button class="env-interactive" aria-label="Sobre de lluvia — toca para abrir" aria-expanded="false">
-      <div class="env-body">
-        <svg class="env-svg" viewBox="0 0 260 200" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="nc-env-fill" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0%" stop-color="#fbf3f1"/>
-              <stop offset="100%" stop-color="#fbf6f3"/>
-            </linearGradient>
-            <linearGradient id="nc-flap-fill" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0%" stop-color="var(--blush)"/>
-              <stop offset="100%" stop-color="#dde9d5"/>
-            </linearGradient>
-          </defs>
-          <rect x="18" y="52" width="224" height="132" rx="10" fill="url(#nc-env-fill)" stroke="rgba(138,166,124,.55)" stroke-width="1.4"/>
-          <path d="M18 184 L130 110 L242 184" stroke="rgba(138,166,124,.45)" stroke-width="1" fill="none"/>
-          <line x1="90"  y1="30" x2="90"  y2="20" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" opacity=".55"/>
-          <line x1="130" y1="24" x2="130" y2="14" stroke="var(--rose)" stroke-width="1.3" stroke-linecap="round" opacity=".7"/>
-          <line x1="170" y1="30" x2="170" y2="20" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" opacity=".55"/>
-          <line x1="110" y1="18" x2="110" y2="10" stroke="var(--blush)" stroke-width="1" stroke-linecap="round" opacity=".5"/>
-          <line x1="150" y1="18" x2="150" y2="10" stroke="var(--blush)" stroke-width="1" stroke-linecap="round" opacity=".5"/>
-          <circle cx="130" cy="118" r="16" fill="rgba(191,159,110,.16)" stroke="rgba(191,159,110,.55)" stroke-width="1"/>
-          <text x="130" y="123" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#55663f" opacity=".9">SR</text>
-        </svg>
-        <div class="env-flap-wrap" aria-hidden="true">
-          <svg viewBox="0 0 224 86" preserveAspectRatio="none" style="width:100%;height:100%">
-            <path d="M0 0 L112 86 L224 0 Z" fill="url(#nc-flap-fill)" stroke="rgba(138,166,124,.55)" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- LLUVIA DE SOBRES — diseño boda-jeffersson-y-vanessa -->
+  <section id="sgifts">
+    <div class="env-rain" id="envRain" aria-hidden="true"></div>
+    <div class="env-stage">
+      <div class="eyebrow rv">Con Cari&ntilde;o</div>
+      <h2 class="sec-title rv">Lluvia de Sobres</h2>
+      <p class="gift-intro rv">Tu presencia es el regalo m&aacute;s valioso.<br>Si deseas obsequiarme algo, con mucho cari&ntilde;o comparto esta opci&oacute;n.</p>
+
+      <button class="env-interactive" id="envGift" type="button" aria-label="Sobre — toca para abrir" aria-expanded="false">
+        <div class="env-body" id="envGiftBody">
+          <svg class="env-svg" viewBox="0 0 260 200" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="envPaper" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0%" stop-color="#fdeef3"/><stop offset="100%" stop-color="#fff7f0"/>
+              </linearGradient>
+            </defs>
+            <rect x="18" y="52" width="224" height="132" rx="8" fill="url(#envPaper)" stroke="rgba(169,66,106,.50)" stroke-width="1.4"/>
+            <path d="M18 184 L130 110 L242 184" stroke="rgba(169,66,106,.30)" stroke-width="1" fill="none"/>
+          </svg>
+          <div class="env-flap-wrap" aria-hidden="true">
+            <svg viewBox="0 0 224 86" preserveAspectRatio="none" style="width:100%;height:100%;display:block">
+              <defs>
+                <linearGradient id="envFlap" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#f9d3e0"/><stop offset="100%" stop-color="#fff4ea"/>
+                </linearGradient>
+              </defs>
+              <path d="M0 0 L112 86 L224 0 Z" fill="url(#envFlap)" stroke="rgba(169,66,106,.50)" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <svg class="env-seal" viewBox="0 0 60 60" aria-hidden="true">
+            <circle cx="30" cy="30" r="28" fill="#4c6140"/>
+            <circle cx="30" cy="30" r="28" fill="none" stroke="#2f3d27" stroke-width="2" opacity=".55"/>
+            <circle cx="30" cy="30" r="21.5" fill="none" stroke="#e8d09a" stroke-width="1.1" opacity=".9"/>
+            <text x="30" y="37" text-anchor="middle" font-family="'Great Vibes', cursive" font-size="22" fill="#f2dfae">SR</text>
           </svg>
         </div>
-      </div>
-      <div class="env-open-content" aria-live="polite">
-        <svg class="env-mailbox-icon" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <rect x="8" y="22" width="36" height="24" rx="5"/><path d="M8 30 Q26 38 44 30"/><rect x="18" y="8" width="16" height="16" rx="2"/><path d="M18 8 Q26 3 34 8"/><rect x="20" y="28" width="12" height="2.5" rx="1.25" fill="currentColor" stroke="none" opacity=".4"/>
-        </svg>
-        <p class="env-title">Lluvia de Sobres</p>
-        <p class="env-desc">En el sal&oacute;n encontrar&aacute;s un buz&oacute;n especial &mdash;<br>con mucho cari&ntilde;o deposita ah&iacute; tu sobre.</p>
-      </div>
-    </button>
-    <p class="env-tap-hint">Toca el sobre</p>
+        <div class="env-open-content" aria-live="polite">
+          <svg class="env-mailbox-icon" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="8" y="22" width="36" height="24" rx="5"/>
+            <path d="M8 30 Q26 38 44 30"/>
+            <rect x="18" y="8" width="16" height="16" rx="2"/>
+            <path d="M18 8 Q26 3 34 8"/>
+            <rect x="20" y="28" width="12" height="2.5" rx="1.25" fill="currentColor" stroke="none" opacity=".4"/>
+          </svg>
+          <p class="env-title">Tu Presencia es mi Mejor Regalo</p>
+          <p class="env-desc">En el sal&oacute;n encontrar&aacute;s un buz&oacute;n especial &mdash; con mucho cari&ntilde;o deposita ah&iacute; tu sobre.</p>
+        </div>
+      </button>
+      <p class="env-tap-hint" id="envGiftHint">Toca para abrir</p>
     </div>
   </section>
 
@@ -989,7 +1179,7 @@ footer .credit a{color:inherit;text-decoration:none;}
   </div>
 
   <!-- ALBUM -->
-  <section class="leaf" id="salbum">
+  <section id="salbum">
     <div class="eyebrow eyebrow-gold rv">Comparte el Momento</div>
     <h2 class="sec-title sec-title-gold rv">&Aacute;lbum Compartido</h2>
     <div class="album-card rv">
@@ -1031,7 +1221,7 @@ footer .credit a{color:inherit;text-decoration:none;}
   </div>
 
   <!-- RSVP -->
-  <section class="leaf" id="srsvp">
+  <section id="srsvp">
     <div class="eyebrow eyebrow-silver">Conf&iacute;rmame tu Asistencia</div>
     <h2 class="sec-title rv">R.S.V.P.</h2>
     <div class="rsvp-card rv">
@@ -1208,71 +1398,258 @@ function launchPage(){
     .to('#hSb',{opacity:1,y:0,duration:1.4},1.0)
     .to('#hDate',{opacity:1,y:0,duration:1.1},1.2)
     .to('#hCity',{opacity:1,duration:1.0},1.4);
+  Book.build();
   initScrollReveal();
+  setTimeout(function(){var h=document.getElementById('bookHint');if(h&&(window.scrollY||0)<40)h.classList.add('on');},2200);
   if(window.startForestFx)window.startForestFx();
 }
 
-/* SCROLL REVEAL */
+/* SCROLL REVEAL — lo dispara el libro cuando el elemento queda a la vista */
 function initScrollReveal(){
   document.querySelectorAll('.rv').forEach(function(el){
-    gsap.fromTo(el,{y:36,opacity:0},{y:0,opacity:1,duration:1.3,ease:'power2.out',
-      scrollTrigger:{trigger:el,start:'top 88%'}});
+    gsap.set(el,{y:36,opacity:0});
+    Book.onVisible(el,function(){gsap.to(el,{y:0,opacity:1,duration:1.3,ease:'power2.out'});});
   });
-  initBookTurn();
+  document.querySelectorAll('.pl-window').forEach(function(w){
+    gsap.set(w,{clipPath:'inset(100% 0% 0% 0%)'});
+    Book.onVisible(w,function(){
+      gsap.to(w,{clipPath:'inset(0% 0% 0% 0%)',duration:1.7,ease:'power3.inOut',delay:.25,
+        onComplete:function(){gsap.set(w,{clearProps:'clipPath'});}});
+    });
+  });
 }
 
-/* ══ EFECTO LIBRO — cada seccion entra girando como una hoja que se pasa ══ */
-function initBookTurn(){
-  var leaves=[].slice.call(document.querySelectorAll('.leaf'));
-  if(!leaves.length)return;
+/* ══════════════════════════════════════════════════════════════════════
+   LIBRO — cada seccion es una hoja fija; el scroll la voltea sobre el lomo
+   izquierdo. Si la hoja es mas alta que la pantalla, primero se lee
+   (desplazamiento interno) y despues se pasa.
+   ══════════════════════════════════════════════════════════════════════ */
+var Book=(function(){
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  if(reduce){leaves.forEach(function(el){gsap.set(el,{clearProps:'all'});});return;}
-  var items=leaves.map(function(el){
-    var shade=document.createElement('div');
-    shade.className='leaf-shade';
-    el.appendChild(shade);
-    gsap.set(el,{rotationY:-74,transformOrigin:'0% 50%',opacity:.22});
-    gsap.set(shade,{opacity:.85});
-    return {el:el,shade:shade,done:false};
-  });
-  function turn(it){
-    if(it.done)return;
-    it.done=true;
-    gsap.to(it.el,{rotationY:0,opacity:1,duration:1.25,ease:'power3.out',
-      onComplete:function(){gsap.set(it.el,{clearProps:'transform,opacity'});}});
-    gsap.to(it.shade,{opacity:0,duration:1.25,ease:'power2.out',
-      onComplete:function(){it.shade.style.display='none';}});
+  var wrap=document.querySelector('.wrap');
+  var pages=[],watchers=[],built=false,enabled=false;
+  var spacer=null,vh=0,W=0,FLIP=0,ticking=false,settleT=null,settling=false,touching=false,prevI=-1;
+
+  function clamp(v,a,b){return v<a?a:(v>b?b:v);}
+  function ease(t){return .5-.5*Math.cos(Math.PI*t);}
+  function div(c){var d=document.createElement('div');d.className=c;return d;}
+  function sy(){return window.pageYOffset||document.documentElement.scrollTop||0;}
+  function jump(y){var h=document.documentElement,o=h.style.scrollBehavior;h.style.scrollBehavior='auto';window.scrollTo(0,y);h.style.scrollBehavior=o;}
+
+  function groups(){
+    var out=[],pend=[];
+    [].slice.call(wrap.children).forEach(function(el){
+      if(el.tagName==='SECTION'){out.push(pend.concat([el]));pend=[];}
+      else if(el.tagName==='FOOTER'){if(out.length){out[out.length-1]=out[out.length-1].concat(pend,[el]);}pend=[];}
+      else pend.push(el);
+    });
+    if(pend.length&&out.length)out[out.length-1]=out[out.length-1].concat(pend);
+    /* hojas muy cortas se unen a la anterior (no dejar paginas casi vacias) */
+    var H=window.innerHeight,merged=[];
+    out.forEach(function(g,i){
+      var r1=g[0].getBoundingClientRect(),r2=g[g.length-1].getBoundingClientRect(),h=r2.bottom-r1.top;
+      if(i>1&&h<H*.5&&merged.length)merged[merged.length-1]=merged[merged.length-1].concat(g);
+      else merged.push(g);
+    });
+    return merged;
   }
-  function check(){
-    var h=window.innerHeight;
-    for(var i=0;i<items.length;i++){
-      if(items[i].done)continue;
-      var r=items[i].el.getBoundingClientRect();
-      if(r.top < h*0.90 && r.bottom > 0) turn(items[i]);
-      else if(r.bottom <= 0) turn(items[i]);   /* ya se paso: mostrarla ya */
+
+  function offTop(el,inner){
+    var t=0,n=el;
+    while(n&&n!==inner){t+=n.offsetTop;n=n.offsetParent;}
+    return n===inner?t:0;
+  }
+
+  function locate(y){
+    var n=pages.length,i=n-1;
+    for(var k=0;k<n-1;k++){if(y<pages[k+1].start){i=k;break;}}
+    var p=pages[i],local=Math.max(0,y-p.start);
+    return {i:i,ty:Math.min(local,p.over),f:(i<n-1)?clamp((local-p.over)/FLIP,0,1):0};
+  }
+
+  function layout(){
+    vh=wrap.clientHeight;W=wrap.clientWidth;FLIP=Math.round(vh*.9);
+    var s=0;
+    pages.forEach(function(p,i){
+      p.over=Math.max(0,p.inner.offsetHeight-vh);
+      p.start=s;
+      s+=p.over+(i<pages.length-1?FLIP:0);
+    });
+    spacer.style.height=(s+vh)+'px';
+    watchers.forEach(cache);
+  }
+
+  function relayout(){
+    if(!built||!enabled)return;
+    var L=locate(sy()),p=pages[L.i],was={ty:L.ty,f:L.f};
+    layout();
+    p=pages[L.i];
+    jump(p.start+(was.f>0?p.over+was.f*FLIP:Math.min(was.ty,p.over)));
+    render();
+  }
+
+  function render(){
+    var y=sy(),L=locate(y),i=L.i,t=ease(L.f),th=t*Math.PI,sn=Math.sin(th);
+    var wide=window.innerWidth>=860;
+    for(var k=0;k<pages.length;k++){
+      var p=pages[k],st=p.el.style;
+      if(k===i){
+        st.visibility='visible';st.zIndex=30;
+        st.transform='rotateY('+(-180*t).toFixed(3)+'deg)';
+        p.inner.style.transform='translate3d(0,'+(-L.ty)+'px,0)';
+        if(L.f>0){
+          /* la hoja se "curva": sombra en el filo, brillo en el lomo del doblez */
+          var d=(.30*sn+.10*t).toFixed(3),hl=(.34*sn).toFixed(3),bw=(6+10*sn).toFixed(1);
+          p.light.style.opacity='1';
+          p.light.style.background='linear-gradient(270deg,rgba(52,30,26,'+d+') 0%,rgba(255,250,244,'+hl+') '+bw+'%,rgba(52,30,26,'+(.16*sn+.22*t).toFixed(3)+') '+(bw*2.6).toFixed(1)+'%,rgba(52,30,26,'+(.30*t).toFixed(3)+') 100%)';
+          p.lightBack.style.opacity='1';
+          p.lightBack.style.background='linear-gradient(90deg,rgba(52,30,26,'+(.30*(1-t)).toFixed(3)+') 0%,rgba(52,30,26,'+(.14*sn).toFixed(3)+') '+(100-bw*2.6).toFixed(1)+'%,rgba(255,250,244,'+hl+') '+(100-bw).toFixed(1)+'%,rgba(52,30,26,'+d+') 100%)';
+        }else{p.light.style.opacity='0';p.lightBack.style.opacity='0';}
+        p.cast.style.background='none';
+        var nearEnd=(i<pages.length-1)&&(L.ty>=p.over-6);
+        p.curl.style.opacity=nearEnd?Math.max(0,1-L.f*8).toFixed(3):'0';
+      }else if(k===i+1){
+        st.visibility='visible';st.zIndex=20;st.transform='rotateY(0deg)';
+        p.inner.style.transform='translate3d(0,0,0)';
+        p.light.style.opacity='0';p.curl.style.opacity='0';
+        if(L.f>0){
+          var a=(.40*sn).toFixed(3),wd=Math.round(40+130*sn);
+          if(t<.5){
+            var edge=Math.round(W*Math.cos(th));
+            p.cast.style.background='linear-gradient(90deg,transparent 0,transparent '+edge+'px,rgba(58,30,34,'+a+') '+edge+'px,rgba(58,30,34,0) '+(edge+wd)+'px)';
+          }else{
+            p.cast.style.background='linear-gradient(90deg,rgba(58,30,34,'+a+') 0,rgba(58,30,34,0) '+wd+'px)';
+          }
+        }else p.cast.style.background='none';
+      }else if(k<i){
+        st.zIndex=10;st.transform='rotateY(-180deg)';
+        st.visibility=(wide&&k===i-1)?'visible':'hidden';
+        p.inner.style.transform='translate3d(0,'+(-p.over)+'px,0)';
+        p.light.style.opacity='1';p.lightBack.style.opacity='0';p.cast.style.background='none';
+      }else{
+        st.visibility='hidden';st.zIndex=1;st.transform='rotateY(0deg)';
+        p.inner.style.transform='translate3d(0,0,0)';p.cast.style.background='none';
+      }
+    }
+    var hint=document.getElementById('bookHint');
+    if(hint&&y>40)hint.classList.remove('on');
+    prevI=i;
+    check(L);
+  }
+
+  function cache(w){
+    var pg=w.el.closest?w.el.closest('.page'):null;
+    w.page=-1;
+    for(var k=0;k<pages.length;k++){if(pages[k].el===pg){w.page=k;break;}}
+    if(w.page>=0){w.top=offTop(w.el,pages[w.page].inner);w.h=w.el.offsetHeight;}
+  }
+
+  function fire(w){w.done=true;try{w.fn();}catch(e){}}
+
+  function check(L){
+    for(var j=0;j<watchers.length;j++){
+      var w=watchers[j];
+      if(w.done)continue;
+      if(w.page<0){fire(w);continue;}
+      if(w.page<L.i)fire(w);
+      else if(w.page===L.i){if(w.top<L.ty+vh*.9&&w.top+w.h>L.ty-4)fire(w);}
+      else if(w.page===L.i+1&&L.f>.12){if(w.top<vh*.92)fire(w);}
     }
   }
-  window.addEventListener('scroll',check,{passive:true});
-  window.addEventListener('resize',check);
-  check();
-  /* red de seguridad: si algo falla, a los 8s nada queda oculto sobre el pliegue */
-  setTimeout(function(){
-    items.forEach(function(it){
-      if(!it.done && it.el.getBoundingClientRect().top < window.innerHeight*1.2) turn(it);
-    });
-  },8000);
-}
 
-/* ══ RETRATO — crossfade de las 3 fotos ══ */
-(function(){
-  var imgs=document.querySelectorAll('.portrait-stack .portrait-img');
-  if(imgs.length<2)return;
-  var i=0;
-  setInterval(function(){
-    imgs[i].classList.remove('is-on');
-    i=(i+1)%imgs.length;
-    imgs[i].classList.add('is-on');
-  },4800);
+  var lastY=0,dir=1;
+  function onScroll(){
+    var y=sy();
+    if(y!==lastY){dir=y>lastY?1:-1;lastY=y;}
+    if(!ticking){ticking=true;requestAnimationFrame(function(){ticking=false;render();});}
+    if(settling)return;
+    clearTimeout(settleT);
+    settleT=setTimeout(settle,260);
+  }
+
+  /* si el lector suelta la hoja a medio pasar, la hoja termina de caer sola
+     hacia el lado en que venia pasandola (como un libro real) */
+  function settle(){
+    if(touching||settling)return;
+    var L=locate(sy());
+    if(L.f>.015&&L.f<.985){
+      var forward=dir>0?(L.f>.10):(L.f>.90);
+      var p=pages[L.i],target=p.start+p.over+(forward?FLIP:0);
+      settling=true;
+      window.scrollTo({top:target,behavior:'smooth'});
+      setTimeout(function(){settling=false;lastY=sy();},800);
+    }
+  }
+
+  function build(){
+    if(built)return;
+    built=true;
+    if(reduce||!wrap){watchers.forEach(fire);return;}
+    enabled=true;
+    var gs=groups();
+    wrap.classList.add('is-book');
+    gs.forEach(function(g,i){
+      var el=div('page'+(i===0?' is-cover':'')),front=div('page-front'),inner=div('page-inner'),back=div('page-back');
+      g.forEach(function(n){inner.appendChild(n);});
+      front.appendChild(inner);
+      if(i>0){var fo=div('page-folio');fo.innerHTML='&middot; '+i+' &middot;';front.appendChild(fo);}
+      var curl=div('page-curl'),light=div('page-light'),cast=div('page-cast');
+      front.appendChild(cast);front.appendChild(light);front.appendChild(curl);
+      back.innerHTML='<span class="pb-mono">SR</span><span class="pb-line"></span><span class="pb-date">26 &middot; XII &middot; MMXXVI</span>';
+      var lb=div('page-light-back');back.appendChild(lb);
+      el.appendChild(front);el.appendChild(back);
+      wrap.appendChild(el);
+      pages.push({el:el,inner:inner,light:light,lightBack:lb,cast:cast,curl:curl,over:0,start:0});
+    });
+    wrap.appendChild(div('book-spine'));
+    wrap.insertBefore(div('book-edge'),wrap.firstChild);
+    spacer=document.createElement('div');spacer.id='book-spacer';
+    document.body.appendChild(spacer);
+    layout();
+    jump(0);
+    render();
+
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('touchstart',function(){touching=true;clearTimeout(settleT);},{passive:true});
+    window.addEventListener('touchend',function(){touching=false;clearTimeout(settleT);settleT=setTimeout(settle,260);},{passive:true});
+    var rt=null;
+    window.addEventListener('resize',function(){
+      clearTimeout(rt);
+      rt=setTimeout(function(){
+        if(Math.abs(wrap.clientWidth-W)>1||Math.abs(wrap.clientHeight-vh)>60)relayout();
+        else render();
+      },120);
+    });
+    if(window.ResizeObserver){
+      var ro=new ResizeObserver(function(){clearTimeout(rt);rt=setTimeout(relayout,80);});
+      pages.forEach(function(p){ro.observe(p.inner);});
+    }
+    window.addEventListener('load',relayout);
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(relayout);
+    /* teclado del celular: llevar la hoja hasta el campo enfocado */
+    wrap.addEventListener('focusin',function(e){
+      var pg=e.target.closest('.page');if(!pg)return;
+      for(var k=0;k<pages.length;k++){
+        if(pages[k].el===pg){
+          var p=pages[k],t=offTop(e.target,p.inner);
+          jump(p.start+clamp(t-vh*.32,0,p.over));
+          render();break;
+        }
+      }
+    });
+  }
+
+  return {
+    state:function(){return {flip:FLIP,pages:pages.map(function(p){return {start:p.start,over:p.over};})};},
+    build:build,
+    onVisible:function(el,fn){
+      if(!el)return;
+      var w={el:el,fn:fn,done:false,page:-1,top:0,h:0};
+      if(built&&!enabled){fire(w);return;}
+      watchers.push(w);
+      if(built){cache(w);check(locate(sy()));}
+    }
+  };
 })();
 
 /* ══ PARTICULAS — bosque encantado: petalos rosados + luciernagas doradas ══ */
@@ -1364,7 +1741,7 @@ function initBookTurn(){
     }
   }
   tick();setInterval(tick,1000);
-  ScrollTrigger.create({trigger:'#scd',start:'top 82%',once:true,onEnter:function(){
+  Book.onVisible(document.getElementById('scd'),function(){
     ringsAnimated=true;
     gsap.fromTo('.cd2-rv',{scale:0.6,opacity:0},{scale:1,opacity:1,duration:1,stagger:0.15,ease:'back.out(2)'});
     gsap.fromTo('.cd2-container',{y:30,opacity:0},{y:0,opacity:1,duration:1.2,ease:'power3.out'});
@@ -1379,7 +1756,7 @@ function initBookTurn(){
         });
       });
     }
-  }});
+  });
 })();
 
 /* GOOGLE CALENDAR */
@@ -1567,12 +1944,63 @@ function initBookTurn(){
   }
 })();
 
-/* SOBRE INTERACTIVO — lluvia de sobres */
+/* LLUVIA DE SOBRES — caen sobrecitos; al abrir la hoja aterriza el sobre */
 (function(){
-  var btn=document.querySelector('.env-interactive');
-  if(!btn)return;
-  function toggle(){var isOpen=btn.classList.toggle('open');btn.setAttribute('aria-expanded',isOpen?'true':'false');}
-  btn.addEventListener('click',toggle);
+  var sec=document.getElementById('sgifts'),rain=document.getElementById('envRain'),
+      btn=document.getElementById('envGift'),body=document.getElementById('envGiftBody'),
+      hint=document.getElementById('envGiftHint');
+  if(!sec||!rain||!btn)return;
+  var raining=false,landed=false,spawnCall=null,alive=0,MAX_ALIVE=18;
+
+  function makeEnvelope(){
+    if(alive>=MAX_ALIVE)return;
+    alive++;
+    var el=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    el.setAttribute('viewBox','0 0 34 24');
+    el.setAttribute('class','env-rain-item');
+    var w=16+Math.random()*16;
+    el.style.width=w+'px';el.style.height=(w*24/34)+'px';
+    el.style.left=(Math.random()*100)+'%';
+    el.innerHTML='<rect x="1" y="1" width="32" height="22" rx="2.5" fill="#fdeef3" stroke="#a9426a" stroke-width="1.2"/>'+
+                 '<path d="M1 1 L17 13 L33 1" fill="none" stroke="#a9426a" stroke-width="1.2" stroke-linejoin="round"/>';
+    rain.appendChild(el);
+    var H=sec.offsetHeight+80,dur=5+Math.random()*4;
+    function kill(){if(el.parentNode){el.remove();alive--;}}
+    gsap.timeline({onComplete:kill})
+      .fromTo(el,{y:-46,x:0,rotation:(Math.random()-.5)*50,opacity:0},
+                 {y:H,x:(Math.random()-.5)*70,rotation:(Math.random()-.5)*160,duration:dur,ease:'none'},0)
+      .fromTo(el,{opacity:0},{opacity:.75,duration:dur*.18,ease:'power1.out'},0)
+      .to(el,{opacity:0,duration:dur*.25,ease:'power1.in'},dur*.75);
+  }
+  function scheduleSpawn(){
+    spawnCall=gsap.delayedCall(.52,function(){if(!raining)return;makeEnvelope();scheduleSpawn();});
+  }
+  function startRain(){
+    if(raining||landed)return;
+    raining=true;
+    for(var i=0;i<7;i++)gsap.delayedCall(i*.26,makeEnvelope);
+    scheduleSpawn();
+  }
+  function stopRain(){
+    raining=false;
+    if(spawnCall)spawnCall.kill();
+    gsap.to(rain,{opacity:0,duration:1.1,ease:'power2.out',onComplete:function(){rain.innerHTML='';alive=0;}});
+  }
+  function land(){
+    if(landed)return;landed=true;
+    stopRain();
+    gsap.fromTo(btn,{opacity:0,y:-150,rotation:-12,scale:.82},
+      {opacity:1,y:0,rotation:0,scale:1,duration:1.15,ease:'back.out(1.5)',
+       onComplete:function(){if(body)body.classList.add('landed');if(hint)hint.classList.add('show');}});
+  }
+  Book.onVisible(sec,function(){startRain();gsap.delayedCall(2.2,land);});
+  btn.addEventListener('click',function(e){
+    if(e)e.preventDefault();
+    if(!landed)return;
+    var open=btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    if(open&&body)body.classList.remove('landed');
+  });
 })();
 
 /* ALBUM — QR dinámico */
@@ -1588,10 +2016,18 @@ function initBookTurn(){
 })();
 
 /* RSVP — animaciones */
-gsap.fromTo('.rsvp-card',{opacity:0,y:40,scale:.97},{opacity:1,y:0,scale:1,duration:1.2,ease:'power4.out',scrollTrigger:{trigger:'.rsvp-card',start:'top 82%'}});
-gsap.fromTo('.rsvp-ornament',{opacity:0,scaleX:0},{opacity:1,scaleX:1,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:'.rsvp-ornament',start:'top 85%'}});
-gsap.fromTo('.rsvp-corner',{opacity:0,scale:.5},{opacity:1,scale:1,duration:1,stagger:.08,ease:'back.out(2)',scrollTrigger:{trigger:'.rsvp-card',start:'top 82%'}});
-gsap.fromTo('.rsvp-deadline-jen',{opacity:0,letterSpacing:'1em'},{opacity:1,letterSpacing:'.42em',duration:1,scrollTrigger:{trigger:'.rsvp-deadline-jen',start:'top 92%'}});
+(function(){
+  var card=document.querySelector('.rsvp-card');
+  if(!card)return;
+  gsap.set('.rsvp-ornament',{opacity:0,scaleX:0});
+  gsap.set('.rsvp-corner',{opacity:0,scale:.5});
+  gsap.set('.rsvp-deadline-jen',{opacity:0,letterSpacing:'1em'});
+  Book.onVisible(card,function(){
+    gsap.to('.rsvp-ornament',{opacity:1,scaleX:1,duration:1.2,ease:'power3.out',delay:.25});
+    gsap.to('.rsvp-corner',{opacity:1,scale:1,duration:1,stagger:.08,ease:'back.out(2)',delay:.2});
+    gsap.to('.rsvp-deadline-jen',{opacity:1,letterSpacing:'.42em',duration:1,delay:.7});
+  });
+})();
 (function(){
   var rsvpBtn2=document.querySelector('.btn-rsvp');
   if(rsvpBtn2&&!('ontouchstart' in window)){
