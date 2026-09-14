@@ -8,7 +8,7 @@
 <meta property="og:title" content="XV A&ntilde;os de Sophia Rinc&oacute;n &middot; 26 Diciembre 2026">
 <meta property="og:description" content="El honor de tu presencia &middot; Tampa, Florida &middot; 26 de Diciembre de 2026">
 <meta property="og:url" content="https://xv-sophia-rincon.vercel.app">
-<meta property="og:image" content="https://xv-sophia-rincon.vercel.app/og-image.jpg">
+<meta property="og:image" content="https://xv-sophia-rincon.vercel.app/og-image.jpg?v=2">
 <meta property="og:image:alt" content="XV A&ntilde;os Sophia Rinc&oacute;n">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,7 +57,7 @@ body{
 #envelope-screen{
   position:fixed;inset:0;z-index:10000;
   overflow:hidden;cursor:pointer;
-  opacity:0;background:#fbf3f1;
+  opacity:0;background:linear-gradient(180deg,#f3f4ec 0%,#ebe7d9 100%);
 }
 #env-image{
   position:absolute;inset:0;width:100%;height:100%;
@@ -68,7 +68,7 @@ body{
   object-fit:contain;object-position:center;
   z-index:3;opacity:0;
 }
-#env-flash{position:fixed;inset:0;background:#fbf3f1;z-index:9999;opacity:0;pointer-events:none;}
+#env-flash{position:fixed;inset:0;background:#ffffff;z-index:9999;opacity:0;pointer-events:none;}
 .envelope-hint{
   position:absolute;bottom:52px;left:50%;transform:translateX(-50%);
   font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:8px;text-transform:uppercase;
@@ -744,7 +744,7 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
 
 <!-- ENVELOPE -->
 <div id="envelope-screen" role="button" aria-label="Toca para abrir tu invitacion">
-  <img id="env-image" src="sobre.png" alt="Invitaci&oacute;n Sophia Rinc&oacute;n">
+  <img id="env-image" src="sobre.jpg" alt="Invitaci&oacute;n Sophia Rinc&oacute;n">
   <video id="env-video" src="apertura.mp4" playsinline webkit-playsinline muted preload="auto"></video>
   <p class="envelope-hint" id="env-hint">Toca para abrir</p>
 </div>
