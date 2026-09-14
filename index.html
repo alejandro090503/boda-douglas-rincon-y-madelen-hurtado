@@ -573,7 +573,7 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;opacity:.42;}
 .pb-line{width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6;}
 .pb-date{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:13px;letter-spacing:.42em;color:var(--gold-ink);opacity:.7;}
-.page-inner{position:relative;min-height:100%;display:flex;flex-direction:column;justify-content:center;padding-bottom:34px;will-change:transform;}
+.page-inner{position:relative;min-height:100%;display:flex;flex-direction:column;justify-content:center;padding-bottom:88px;will-change:transform;}
 .page-inner>*{flex-shrink:0;}
 .page.is-cover .page-inner{padding-bottom:0;}
 .page.is-cover .hero{min-height:0;flex:1 0 auto;}
@@ -582,7 +582,7 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
 .page-light{z-index:8;opacity:0;background:linear-gradient(270deg,rgba(52,30,26,.36) 0%,rgba(52,30,26,.14) 42%,rgba(255,255,255,.10) 100%);}
 .page-light-back{z-index:2;opacity:0;background:linear-gradient(90deg,rgba(52,30,26,.32) 0%,rgba(255,255,255,.14) 55%,rgba(52,30,26,.10) 100%);}
 .page-cast{z-index:7;}
-.page-folio{position:absolute;left:0;right:0;bottom:11px;z-index:6;pointer-events:none;text-align:center;
+.page-folio{position:absolute;left:0;right:0;top:12px;z-index:6;pointer-events:none;text-align:center;
   font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:14px;letter-spacing:.3em;color:var(--gold-ink);opacity:.8;}
 /* esquina doblada: invita a pasar la pagina */
 .page-curl{position:absolute;right:0;top:0;width:42px;height:42px;z-index:9;pointer-events:none;opacity:0;
@@ -596,13 +596,29 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
 .book-edge{position:absolute;top:5px;bottom:5px;right:-7px;width:7px;z-index:0;pointer-events:none;border-radius:0 3px 3px 0;
   background:repeating-linear-gradient(90deg,#e6d6ce 0 1px,#fffaf7 1px 2px);box-shadow:3px 0 8px rgba(80,52,40,.14);}
 @media (max-width:459px){.book-edge{display:none;}}
-.book-hint{position:absolute;left:0;right:0;bottom:calc(108px + env(safe-area-inset-bottom));z-index:4;
-  display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none;
-  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:16px;letter-spacing:.12em;
-  color:var(--dark);opacity:0;transition:opacity .7s ease;text-shadow:0 1px 6px rgba(255,255,255,.9);}
-.book-hint.on{opacity:1;}
-.book-hint svg{width:34px;height:34px;animation:hintTurn 2.4s ease-in-out infinite;}
-@keyframes hintTurn{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(-10deg)}}
+/* ══ INDICADOR "DESLIZA PARA PASAR LA PAGINA" ══ */
+.turn-cue{position:absolute;left:0;right:0;bottom:calc(24px + env(safe-area-inset-bottom));margin:0 auto;width:max-content;max-width:calc(100% - 40px);
+  z-index:70;pointer-events:none;display:flex;align-items:center;gap:12px;padding:10px 20px 10px 14px;border-radius:40px;
+  background:linear-gradient(135deg,rgba(255,252,248,.94),rgba(252,236,242,.94));
+  border:1px solid rgba(169,66,106,.30);
+  box-shadow:0 10px 26px rgba(142,47,86,.18),0 2px 6px rgba(76,97,64,.10),inset 0 1px 0 rgba(255,255,255,.9);
+  opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.8,.2,1);}
+.turn-cue.on{opacity:1;transform:translateY(0);}
+.turn-cue-ico{position:relative;width:26px;height:30px;flex-shrink:0;}
+.turn-cue-ico i{position:absolute;left:50%;width:12px;height:12px;margin-left:-6px;border-left:2px solid #a9426a;border-top:2px solid #a9426a;
+  transform:rotate(45deg);opacity:0;animation:cueRise 1.8s ease-in-out infinite;}
+.turn-cue-ico i:nth-child(1){top:14px;}
+.turn-cue-ico i:nth-child(2){top:8px;animation-delay:.22s;}
+.turn-cue-ico i:nth-child(3){top:2px;animation-delay:.44s;}
+@keyframes cueRise{0%{opacity:0;transform:translateY(6px) rotate(45deg)}40%{opacity:1}80%,100%{opacity:0;transform:translateY(-6px) rotate(45deg)}}
+.turn-cue-txt{display:flex;flex-direction:column;line-height:1.2;text-align:left;}
+.turn-cue-txt b{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:16px;color:#6e2446;letter-spacing:.02em;}
+.turn-cue-txt small{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:14px;color:var(--dark);}
+.turn-cue.pulse{animation:cuePulse 2.6s ease-in-out infinite;}
+@keyframes cuePulse{0%,100%{box-shadow:0 10px 26px rgba(142,47,86,.18),0 0 0 0 rgba(244,164,192,.55)}50%{box-shadow:0 10px 26px rgba(142,47,86,.18),0 0 0 9px rgba(244,164,192,0)}}
+@media (max-width:459px){.turn-cue{right:92px;left:14px;margin:0 auto;max-width:none;}}
+@media (max-width:340px){.turn-cue-txt small{display:none;}}
+@media (prefers-reduced-motion:reduce){.turn-cue-ico i,.turn-cue.pulse{animation:none!important;opacity:1;}}
 
 /* ══ BRILLO LENTO EN TODOS LOS TITULOS ══ */
 :root{
@@ -789,13 +805,6 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
 
       <div class="hero-city" id="hCity">Tampa, Florida</div>
 
-    </div>
-    <div class="book-hint" id="bookHint" aria-hidden="true">
-      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 7h16l6 6v20H9z" opacity=".55"/><path d="M25 7v6h6"/>
-        <path d="M31 25c-4 0-9 1.5-12 6" stroke="var(--rose-ink)"/><path d="M19 27v4h4" stroke="var(--rose-ink)"/>
-      </svg>
-      <span>Desliza para pasar la p&aacute;gina</span>
     </div>
   </section>
 
@@ -1400,7 +1409,6 @@ function launchPage(){
     .to('#hCity',{opacity:1,duration:1.0},1.4);
   Book.build();
   initScrollReveal();
-  setTimeout(function(){var h=document.getElementById('bookHint');if(h&&(window.scrollY||0)<40)h.classList.add('on');},2200);
   if(window.startForestFx)window.startForestFx();
 }
 
@@ -1531,8 +1539,7 @@ var Book=(function(){
         p.inner.style.transform='translate3d(0,0,0)';p.cast.style.background='none';
       }
     }
-    var hint=document.getElementById('bookHint');
-    if(hint&&y>40)hint.classList.remove('on');
+    cue(L);
     prevI=i;
     check(L);
   }
@@ -1557,7 +1564,20 @@ var Book=(function(){
     }
   }
 
-  var lastY=0,dir=1;
+  var lastY=0,dir=1,cueEl=null,cueT=null,cueReady=false;
+  function cue(L){
+    if(!cueEl)return;
+    var p=pages[L.i],last=L.i>=pages.length-1;
+    var wanted=!last&&L.f===0&&L.ty>=p.over-6;
+    cueEl.classList.remove('on');
+    clearTimeout(cueT);
+    if(wanted&&cueReady){
+      cueT=setTimeout(function(){
+        var M=locate(sy());
+        if(M.i===L.i&&M.f===0){cueEl.classList.add('on');cueEl.classList.toggle('pulse',M.i<2);}
+      },700);
+    }
+  }
   function onScroll(){
     var y=sy();
     if(y!==lastY){dir=y>lastY?1:-1;lastY=y;}
@@ -1602,12 +1622,18 @@ var Book=(function(){
       pages.push({el:el,inner:inner,light:light,lightBack:lb,cast:cast,curl:curl,over:0,start:0});
     });
     wrap.appendChild(div('book-spine'));
+    var touch=window.matchMedia?window.matchMedia('(hover:none) and (pointer:coarse)').matches:('ontouchstart' in window);
+    cueEl=div('turn-cue');cueEl.setAttribute('aria-hidden','true');
+    cueEl.innerHTML='<span class="turn-cue-ico"><i></i><i></i><i></i></span>'+
+      '<span class="turn-cue-txt"><b>'+(touch?'Desliza hacia arriba':'Despl&aacute;zate hacia abajo')+'</b><small>para pasar la p&aacute;gina</small></span>';
+    wrap.appendChild(cueEl);
     wrap.insertBefore(div('book-edge'),wrap.firstChild);
     spacer=document.createElement('div');spacer.id='book-spacer';
     document.body.appendChild(spacer);
     layout();
     jump(0);
     render();
+    setTimeout(function(){cueReady=true;cue(locate(sy()));},2600);
 
     window.addEventListener('scroll',onScroll,{passive:true});
     window.addEventListener('touchstart',function(){touching=true;clearTimeout(settleT);},{passive:true});
