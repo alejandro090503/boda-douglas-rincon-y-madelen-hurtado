@@ -1,4 +1,4 @@
 .vercel
 .playwright-mcp
 .env*.local
-_*.py
+_*
