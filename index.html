@@ -930,8 +930,12 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
 .env-card-text{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:5cqw;line-height:1.45;color:#3f261c;margin:0;}
 .env-card-close{display:block;margin-top:3.6cqw;font-family:'Cinzel',serif;font-weight:700;font-size:2.8cqw;letter-spacing:.2em;text-transform:uppercase;color:#8c5f33;}
 /* "Toca para abrir": boton rosado (sobre de entrada y sobre de regalos) */
-.envelope-hint{color:#fff!important;background:linear-gradient(135deg,#d77ea2 0%,#b8567f 100%)!important;border:1px solid rgba(255,255,255,.7)!important;
-  box-shadow:0 8px 24px rgba(162,74,110,.35)!important;text-shadow:0 1px 2px rgba(120,30,60,.35);font-weight:700!important;}
+/* boton de la tarjeta como el de su referencia: pastilla oro-cafe "ABRIR INVITACION" con el nombre encima */
+.envelope-hint{color:#fff8ec!important;background:linear-gradient(180deg,#c49a5a 0%,#9c7238 55%,#7d5627 100%)!important;border:1px solid rgba(255,236,200,.75)!important;
+  box-shadow:0 8px 22px rgba(90,55,20,.35),inset 0 1px 0 rgba(255,240,210,.6)!important;text-shadow:0 1px 1px rgba(60,35,10,.4);
+  font-family:'Cinzel',serif!important;font-weight:700!important;font-size:13px!important;letter-spacing:4px!important;padding:14px 34px!important;}
+.env-name{position:absolute;left:0;right:0;bottom:118px;z-index:10;margin:0;text-align:center;font-family:'Great Vibes',cursive;font-size:46px;line-height:1.2;
+  color:#8a2f55;text-shadow:0 0 12px rgba(255,248,244,.95),0 0 3px rgba(255,248,244,.95);opacity:0;pointer-events:none;}
 #sgifts .env-tap-hint{display:inline-block;padding:2.2cqw 6cqw;border-radius:40px;color:#fff;font-weight:700;
   background:linear-gradient(135deg,#d77ea2 0%,#b8567f 100%);box-shadow:0 2cqw 5cqw rgba(162,74,110,.32);letter-spacing:.24em;}
 #sgifts .env-tap-hint.show{opacity:1;animation:envHintPulse 2.4s ease-in-out infinite;}
@@ -950,7 +954,8 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
 <div id="envelope-screen" role="button" aria-label="Toca para abrir tu invitacion">
   <img id="env-image" src="sobre.jpg" alt="Invitaci&oacute;n Sophia Rinc&oacute;n">
   <video id="env-video" src="apertura.mp4" playsinline webkit-playsinline muted preload="auto"></video>
-  <p class="envelope-hint" id="env-hint">Toca para abrir</p>
+  <p class="env-name" id="env-name">Sophia</p>
+  <p class="envelope-hint" id="env-hint">Abrir invitaci&oacute;n</p>
 </div>
 <div id="env-flash"></div>
 
@@ -1239,7 +1244,8 @@ gsap.registerPlugin(ScrollTrigger);
 
   gsap.timeline()
     .to(envScreen,{opacity:1,duration:1.2,ease:'power2.out',delay:0.3})
-    .to(hint,{opacity:1,duration:0.9,ease:'power2.out'},'-=0.5');
+    .to(hint,{opacity:1,duration:0.9,ease:'power2.out'},'-=0.5')
+    .to('#env-name',{opacity:1,duration:0.9,ease:'power2.out'},'<');
 
   function revealInvitation(){
     if(invitationReady)return;
@@ -1270,7 +1276,7 @@ gsap.registerPlugin(ScrollTrigger);
   function openEnvelope(){
     if(opened)return;
     opened=true;
-    gsap.to(hint,{opacity:0,duration:0.2});
+    gsap.to([hint,'#env-name'],{opacity:0,duration:0.2});
     var playPromise=envVideo.play();
     gsap.to(envImage,{opacity:0,duration:0.55,ease:'power2.inOut',
       onComplete:function(){envImage.style.display='none';}});
