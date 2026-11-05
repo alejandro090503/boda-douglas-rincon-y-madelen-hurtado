@@ -816,7 +816,9 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
 .pg-star{font-style:normal;color:#a8743c;font-size:3.6cqw;line-height:1;}
 
 /* portada */
-.pg-photo-portada{position:absolute;left:5%;bottom:0;width:90%;height:auto;z-index:1;pointer-events:none;}
+.pg-photo-portada{position:absolute;left:15.6%;width:68.8%;top:47%;bottom:0;z-index:1;pointer-events:none;overflow:hidden;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16%);mask-image:linear-gradient(to bottom,transparent 0,#000 16%);}
+.pg-photo-portada img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block;filter:saturate(1.02) contrast(1.02);}
 
 /* festejada: la foto entra en el ovalo dibujado del fondo */
 .pg-oval{position:absolute;z-index:1;border-radius:50%;overflow:hidden;}
@@ -964,7 +966,7 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
 
   <!-- 1 · PORTADA -->
   <section class="pg" id="pPortada">
-    <div class="pg-stage"><img class="pg-bg" src="fondo-portada.jpg" alt="" aria-hidden="true"><img class="pg-photo-portada" id="pPhoto" src="portada-sophia2.webp" alt="Sophia con su vestido de XV a&ntilde;os">
+    <div class="pg-stage"><img class="pg-bg" src="fondo-portada.jpg" alt="" aria-hidden="true"><div class="pg-photo-portada" id="pPhoto"><img src="portada-real.jpg" alt="Sophia con su vestido de XV a&ntilde;os"></div>
     <div class="pg-zone" style="left:16%;top:21%;width:68%;height:26%">
       <div class="pg-caps pg-caps--lg" id="pEy">Mis 15 A&ntilde;os</div>
       <div id="pDiv"><div class="pg-div"><span></span><i class="pg-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.6C6.4 16 1 11.3 1 7.2 1 3.4 4.1 2 6.3 2c1.3 0 4.1.5 5.7 4.4C13.6 2.5 16.5 2 17.7 2 20.3 2 23 3.6 23 7.2c0 4.1-5.1 8.6-11 14.4z"/></svg></i><span></span></div></div>
