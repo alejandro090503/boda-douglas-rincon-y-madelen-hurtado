@@ -900,6 +900,17 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
 .pg-credit{margin-top:2cqw;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:14px;color:#6e4626;}
 .pg-credit a{color:inherit;}
 
+
+/* ══ carrusel 3D con espejo y giro automatico (foto instantanea) ══ */
+.wheel-scene{position:relative;width:100%;height:96cqw;margin-top:2cqw;perspective:1100px;transform-style:preserve-3d;}
+.wheel-ring{position:absolute;inset:0;transform-style:preserve-3d;cursor:grab;touch-action:pan-y;}
+.wheel-ring.dragging{cursor:grabbing;}
+.wheel-card{position:absolute;left:50%;top:38%;width:30cqw;height:45cqw;margin-left:-15cqw;margin-top:-22.5cqw;border-radius:2cqw;overflow:hidden;
+  border:2px solid #fffaf6;box-shadow:0 0 0 1px rgba(201,154,90,.65),0 3cqw 7cqw rgba(140,60,80,.28);user-select:none;-webkit-user-select:none;
+  -webkit-box-reflect:below 2.4cqw linear-gradient(to bottom,transparent 55%,rgba(255,255,255,.45) 100%);}
+.wheel-card img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;pointer-events:none;}
+.wheel-hint{margin-top:-6cqw;opacity:.85;}
+
 /* ══ correcciones 29 oct ══ */
 /* la carta del sobre de regalos */
 #sgifts .env-open-content{display:none!important;}
@@ -1004,11 +1015,24 @@ body{background:radial-gradient(ellipse 120% 90% at 50% 20%,#fff8fa 0%,#f9e8ee 5
   <!-- 5 · FOTO INSTANTANEA -->
   <section class="pg" id="pInstantanea">
     <div class="pg-stage"><img class="pg-bg" src="fondo-instantanea.jpg" alt="" aria-hidden="true">
-    <div class="pg-zone pg-zone--free" style="left:13%;top:10%;width:74%;height:78%">
-      <figure class="polaroid rv">
-        <div class="pl-window polaroid-photo"><img class="pl-img" src="sophia-foto.jpg" alt="Sophia con vestido de XV a&ntilde;os"><span class="pl-c tl"></span><span class="pl-c tr"></span><span class="pl-c bl"></span><span class="pl-c br"></span></div>
-        <figcaption><span class="pg-script pg-script--md">Mis 15 a&ntilde;os</span><div class="pg-div"><span></span><i class="pg-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.6C6.4 16 1 11.3 1 7.2 1 3.4 4.1 2 6.3 2c1.3 0 4.1.5 5.7 4.4C13.6 2.5 16.5 2 17.7 2 20.3 2 23 3.6 23 7.2c0 4.1-5.1 8.6-11 14.4z"/></svg></i><span></span></div></figcaption>
-      </figure>
+    <div class="pg-zone pg-zone--free" style="left:4%;top:10%;width:92%;height:80%">
+      <h2 class="pg-script pg-script--lg rv">Mis 15 a&ntilde;os</h2>
+      <div class="rv"><div class="pg-div"><span></span><i class="pg-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.6C6.4 16 1 11.3 1 7.2 1 3.4 4.1 2 6.3 2c1.3 0 4.1.5 5.7 4.4C13.6 2.5 16.5 2 17.7 2 20.3 2 23 3.6 23 7.2c0 4.1-5.1 8.6-11 14.4z"/></svg></i><span></span></div></div>
+      <div class="wheel-scene" id="wheel-scene">
+        <div class="wheel-ring" id="wheel-ring">
+          <div class="wheel-card"><img src="sophia-g1.jpg" alt="Sophia en su sesi&oacute;n de XV a&ntilde;os" draggable="false"></div>
+          <div class="wheel-card"><img src="sophia-g2.jpg" alt="Sophia en su sesi&oacute;n de XV a&ntilde;os" draggable="false"></div>
+          <div class="wheel-card"><img src="sophia-g3.jpg" alt="Sophia en su sesi&oacute;n de XV a&ntilde;os" draggable="false"></div>
+          <div class="wheel-card"><img src="sophia-g4.jpg" alt="Sophia en su sesi&oacute;n de XV a&ntilde;os" draggable="false"></div>
+          <div class="wheel-card"><img src="sophia-g5.jpg" alt="Sophia en su sesi&oacute;n de XV a&ntilde;os" draggable="false"></div>
+          <div class="wheel-card"><img src="sophia-g1.jpg" alt="Sophia en su sesi&oacute;n de XV a&ntilde;os" draggable="false"></div>
+          <div class="wheel-card"><img src="sophia-g2.jpg" alt="Sophia en su sesi&oacute;n de XV a&ntilde;os" draggable="false"></div>
+          <div class="wheel-card"><img src="sophia-g3.jpg" alt="Sophia en su sesi&oacute;n de XV a&ntilde;os" draggable="false"></div>
+          <div class="wheel-card"><img src="sophia-g4.jpg" alt="Sophia en su sesi&oacute;n de XV a&ntilde;os" draggable="false"></div>
+          <div class="wheel-card"><img src="sophia-g5.jpg" alt="Sophia en su sesi&oacute;n de XV a&ntilde;os" draggable="false"></div>
+        </div>
+      </div>
+      <p class="pg-caps pg-caps--xs wheel-hint">Desliza para ver m&aacute;s</p>
     </div>
     </div>
   </section>
@@ -1893,6 +1917,37 @@ var Book=(function(){
   });
   var cardEl=document.getElementById('envCard');
   if(cardEl)cardEl.addEventListener('click',function(){if(btn.classList.contains('open'))btn.click();});
+})();
+
+
+/* CARRUSEL 3D — espejo + giro automatico; arrastrable con el dedo */
+(function(){
+  var ring=document.getElementById('wheel-ring');
+  if(!ring)return;
+  var cards=[].slice.call(ring.querySelectorAll('.wheel-card'));
+  var n=cards.length,rot=0,vel=0,drag=false,sx=0,sr=0,lx=0,raf=null,running=false;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var AUTO=reduce?0:-0.16;
+  function layout(){
+    var w=cards[0].offsetWidth||150;
+    var r=Math.round((w/2)/Math.tan(Math.PI/n)*1.12);
+    cards.forEach(function(c,i){c.style.transform='rotateY('+(360/n*i)+'deg) translateZ('+r+'px)';});
+  }
+  function set(r){rot=r;ring.style.transform='translateZ(-1px) rotateY('+rot+'deg)';}
+  function loop(){vel+=(AUTO-vel)*0.035;set(rot+vel);raf=requestAnimationFrame(loop);}
+  function start(){if(running)return;running=true;layout();raf=requestAnimationFrame(loop);}
+  function down(x){cancelAnimationFrame(raf);drag=true;vel=0;sx=x;sr=rot;lx=x;ring.classList.add('dragging');}
+  function move(x){if(!drag)return;vel=(x-lx)*0.5;lx=x;set(sr+(x-sx)*0.45);}
+  function up(){if(!drag)return;drag=false;ring.classList.remove('dragging');raf=requestAnimationFrame(loop);}
+  ring.addEventListener('mousedown',function(e){down(e.clientX);});
+  window.addEventListener('mousemove',function(e){move(e.clientX);});
+  window.addEventListener('mouseup',up);
+  ring.addEventListener('touchstart',function(e){down(e.touches[0].clientX);},{passive:true});
+  ring.addEventListener('touchmove',function(e){move(e.touches[0].clientX);},{passive:true});
+  ring.addEventListener('touchend',up);
+  window.addEventListener('resize',layout);
+  layout();
+  Book.onVisible(document.getElementById('wheel-scene'),start);
 })();
 
 /* ALBUM — QR dinámico */
