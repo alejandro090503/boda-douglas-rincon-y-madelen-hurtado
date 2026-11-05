@@ -1489,7 +1489,7 @@ var Book=(function(){
   function build(){
     if(built)return;
     built=true;
-    if(reduce||!wrap){watchers.forEach(fire);return;}
+    if(!wrap){watchers.forEach(fire);return;}
     enabled=true;
     var gs=groups();
     wrap.classList.add('is-book');
